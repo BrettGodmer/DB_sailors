@@ -62,26 +62,23 @@ SQL> SELECT * FROM LazySailors;
         32 Albert                   8                                           
 
 SQL> SET AUTOCOMMIT ON;
-SQL> INSERT INTO Sailors
-  2  	     VALUES (22, 'Dave', 6, 45.0, 95);
-INSERT INTO Sailors
+SQL> INSERT INTO Sailors     VALUES (22, 'Dave', 6, 45.0, 95);
+INSERT INTO Sailors	VALUES (22, 'Dave', 6, 45.0, 95)
 *
 ERROR at line 1:
 ORA-00001: unique constraint (GODMERB.SIC1) violated 
 
 
-SQL> INSERT INTO Sailors
-  2  	     VALUES (21, 'Jay', 6, 45.0, 99);
-INSERT INTO Sailors
+SQL> INSERT INTO Sailors VALUES (21, 'Jay', 6, 45.0, 99);
+INSERT INTO Sailors VALUES (21, 'Jay', 6, 45.0, 99)
 *
 ERROR at line 1:
 ORA-02091: transaction rolled back 
 ORA-02291: integrity constraint (GODMERB.SIC2) violated - parent key not found 
 
 
-SQL> INSERT INTO Sailors
-  2  	     VALUES (92, 'Popeye', 17, 45.0, 95);
-INSERT INTO Sailors
+SQL> INSERT INTO Sailors VALUES (92, 'Popeye', 17, 45.0, 95);
+INSERT INTO Sailors VALUES (92, 'Popeye', 17, 45.0, 95)
 *
 ERROR at line 1:
 ORA-02290: check constraint (GODMERB.SIC3) violated 
